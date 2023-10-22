@@ -23,8 +23,12 @@ class Menu:
                 200,
                 'Mountain Shooter',
                 (255, 128, 0),
-                ((WIN_WIDTH / 2), 700))
+                ((WIN_WIDTH / 2),(WIN_HEIGHT / 2)))
             pygame.display.flip()
+            tecla_pressionada = pygame.key.get_pressed()
+            if tecla_pressionada == 'I':
+                pygame.quit()
+
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_position: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida sans typewrite", size=text_size)
